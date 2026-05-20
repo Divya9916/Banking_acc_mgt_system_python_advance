@@ -9,27 +9,13 @@ This project is a Python-based Bank Account Management System designed to simula
 
 ## Technical Workflow
 1. System Architecture & Data Storage
-Data Persistence: Utilized the pickle module to serialize and deserialize Python objects, allowing account data to be saved permanently to a binary file and retrieved across different sessions.
-
-Efficient Data Structures: Employed Dictionaries to store customer information where the Account Number serves as the unique key, ensuring O(1) lookup time for transactions.
-
-Transaction History: Integrated Lists within the customer object to maintain a chronological log of all deposits and withdrawals for audit purposes.
+Data Persistence: Utilized the pickle module to serialize and deserialize Python objects, allowing account data to be saved permanently to a binary file and retrieved across different sessions. Efficient Data Structures: Employed Dictionaries to store customer information where the Account Number serves as the unique key, ensuring O(1) lookup time for transactions.Transaction History: Integrated Lists within the customer object to maintain a chronological log of all deposits and withdrawals for audit purposes.
 
 2. Core Banking Functionalities
-Account Lifecycle: Managed the full lifecycle from account creation (assigning unique account numbers and secure PINs) to closing or updating records.
-
-Financial Operations:
-
-Deposits & Withdrawals: Implemented logic to update account balances while validating that withdrawal amounts do not exceed the current balance.
-
-Fund Transfers: Developed a secure transfer mechanism that simultaneously updates the sender's and recipient's ledgers.
-
-Reporting: Built a report generator that provides a snapshot of account details, including current balance and recent activity.
+Account Lifecycle: Managed the full lifecycle from account creation (assigning unique account numbers and secure PINs) to closing or updating records.Financial Operations:Deposits & Withdrawals: Implemented logic to update account balances while validating that withdrawal amounts do not exceed the current balance. Fund Transfers: Developed a secure transfer mechanism that simultaneously updates the sender's and recipient's ledgers. Reporting: Built a report generator that provides a snapshot of account details, including current balance and recent activity.
 
 3. Security & Validation
-PIN Authentication: Implemented security checks requiring a valid PIN for any transaction-related activity.
-
-Input Validation: Integrated error handling to manage invalid inputs, such as non-numeric amounts or non-existent account numbers, preventing system crashes.
+PIN Authentication: Implemented security checks requiring a valid PIN for any transaction-related activity. Input Validation: Integrated error handling to manage invalid inputs, such as non-numeric amounts or non-existent account numbers, preventing system crashes.
 
 ## Key Features
 Menu-Driven Interface: A user-friendly command-line menu offering options for "New Account," "Transaction," "Report," and "Exit."
